@@ -1,0 +1,65 @@
+First I use oxford-pets dataset which we downloaded from roboflow:  ( YOLOv5.ipynb )
+https://public.roboflow.com/object-detection/oxford-pets/2
+
+it has train,valid and test files which has images and its labels (annotations) 
+
+
+to train the model: (train.py) (need to be from scratch not pre-trained)
+we use the configration file: yolov5s.yaml
+datafile: coco128.yaml (in which we modify number of classes for our dataset and names of classes and put the URLs for train and valid images)
+hyp file: data/hyps/hyp.scratch-low.yaml 
+we put '' in weights to prevent get pre-trained weights and create new
+and the results stored in: runs/train/exp
+
+
+to validate the model: (val.py)
+in weights we use best.pt which created after the train proccessing
+and the same datafile (coco128.yaml)
+and the results stored in: runs/val/exp
+
+to test the model: (detect.py)
+in weights we use best.pt which created after the train proccessing
+and the same datafile (coco128.yaml)
+and the results stored in: runs/detect/exp
+
+
+
+
+
+Second I use dice dataset:  ( Custom.ipynb )
+https://drive.google.com/drive/folders/13WgTlOwYIIBmqlYhAGuwOfJ4Ri24xKDX?usp=sharing
+
+it has train,valid and test files with hand made annotations 
+
+
+to train the model: (train.py) (need to be from scratch not pre-trained)
+we use the configration file: yolov5s.yaml
+datafile: coco128.yaml (in which we modify number of classes for our dataset and names of classes and put the URLs for train and valid images)
+hyp file: data/hyps/hyp.scratch-low.yaml 
+we put '' in weights to prevent get pre-trained weights and create new
+and the results stored in: runs/train/exp
+
+
+to validate the model: (val.py)
+in weights we use best.pt which created after the train proccessing
+and the same datafile (coco128.yaml)
+and the results stored in: runs/val/exp
+
+to test the model: (detect.py)
+in weights we use best.pt which created after the train proccessing
+and the same datafile (coco128.yaml)
+and the results stored in: runs/detect/exp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
